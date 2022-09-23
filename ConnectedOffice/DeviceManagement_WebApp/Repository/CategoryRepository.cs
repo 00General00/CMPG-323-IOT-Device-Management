@@ -10,6 +10,7 @@ namespace DeviceManagement_WebApp.Repository
     {
         protected readonly ConnectedOfficeContext _connectedOfficeContext = new ConnectedOfficeContext();
 
+
         // GET ALL: Category
         public IEnumerable<Category> GetAll()
         {
@@ -17,16 +18,39 @@ namespace DeviceManagement_WebApp.Repository
 
         }
         // TO DO: Add ‘Get By Id’
-        public IEnumerable<Category> GetId()
+        public IEnumerable<Category> GetById(int id)
         {
             return _connectedOfficeContext.Category.ToList();
 
         }
-        // TO DO: Add ‘Create’
-        // TO DO: Add ‘Edit’
-        // TO DO: Add ‘Delete’
-        // TO DO: Add ‘Exists’
+        // TO DO: Add ‘Create’ (CategoryName)
+        public void Add(Category category)
+        {
+            _connectedOfficeContext.Category.Add(category);
 
+            
+
+        }
+        // TO DO: Add ‘Edit’
+        public IEnumerable<Category> Edit()
+        {
+            return _connectedOfficeContext.Category.ToList();
+
+        }
+        // TO DO: Add ‘Delete’
+        public void Remove(Category category)
+        {
+            _connectedOfficeContext.Category.Remove(category);
+
+        }
+        // TO DO: Add ‘Exists’
+        public Category Update(Category category)
+        {
+            _connectedOfficeContext.Category.Update(category);
+
+            return category;
+
+        }
 
     }
 }
