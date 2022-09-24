@@ -21,5 +21,9 @@ namespace DeviceManagement_WebApp.Repository
         void RemoveRange(IEnumerable<T> entities);
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
     }
-
+    /*
+    public interface IGenericRepository : IGenericRepository<Service>
+    {
+        Service GetMostRecentService();
+    }*/
 }
