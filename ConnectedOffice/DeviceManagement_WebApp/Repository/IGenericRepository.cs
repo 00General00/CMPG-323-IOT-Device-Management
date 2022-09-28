@@ -14,7 +14,7 @@ namespace DeviceManagement_WebApp.Repository
         IEnumerable<T> GetAll();
 
         //existing
-        Category Update(Category category);
+      //  Category Update(Category category);
 
         void AddRange(IEnumerable<T> entities);
         
