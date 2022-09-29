@@ -69,6 +69,10 @@ The reason for change in the project commit, is that i had to restart serveral t
 there are some errors, but they are not as server and/or big like before.
 
 
+# Passwords
+for website login
+email = generalntjie@gmail.com
+password = Password@1
 
 
 # Reference List
