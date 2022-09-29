@@ -47,7 +47,7 @@ namespace DeviceManagement_WebApp.Repository
         {
             _context.Entry(device).State = EntityState.Modified;
         }
-
+        // there is an error here!!!!! remember to fix before submitting
         void IDeviceRepository.DeleteDevice(int id)
         {
             _context.Device.Find(id);
@@ -55,50 +55,6 @@ namespace DeviceManagement_WebApp.Repository
 
         }
 
-        /**
-    public bool DeleteDevice(int id)
-    {
-       bool result = false;
-       var dev = _context.Device.Find(id);
-       _context.Device.Remove(dev);
-       _context.SaveChanges();
-
-       result = true;
-
-       return result;
-
-
-    }
-
-    public bool SaveDevice(Device device)
-    {
-       bool outcome = false;
-       try
-       {
-           _context.Device.Add(device);
-           _context.SaveChanges();
-           outcome = true;
-       }
-       catch {
-       }
-   
-
-
-       return outcome;
-    }
-
-
-
-    public bool UpdateDevice(Device device)
-    {
-       bool outcome = false;
-       _context.Device.Update(device);
-       _context.SaveChanges();
-       outcome = true;
-
-
-       return outcome;
-    }**/
     }
 
 
