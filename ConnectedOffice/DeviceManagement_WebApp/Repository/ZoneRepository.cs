@@ -44,7 +44,7 @@ namespace DeviceManagement_WebApp.Repository
             _context.Entry(zone).State = EntityState.Modified;
         }
 
-
+      //fix
         void IZonesRepository.DeleteZone(int id)
         {
             _context.Device.Find(id);

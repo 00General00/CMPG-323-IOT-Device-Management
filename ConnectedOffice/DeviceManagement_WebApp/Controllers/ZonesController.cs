@@ -49,7 +49,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        //deletes a record 
+        //delete a record 
 
         public ActionResult Delete(int id)
         {

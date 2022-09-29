@@ -9,20 +9,17 @@ namespace DeviceManagement_WebApp.Repository
 {
     public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
-        private ConnectedOfficeContext context;
+        private ConnectedOfficeContext _connectedOfficeContext;
 
-        public CategoryRepository(ConnectedOfficeContext context) : base(context)
+        public CategoryRepository(ConnectedOfficeContext _connectedOfficeContext) : base(_connectedOfficeContext)
         {
 
         }
 
-       
-
-
         public async Task<Category> DeleteCategory(int id)
         {
-            Category category = context.Category.Find(id);
-            context.Category.Remove(category);
+            Category category = _connectedOfficeContext.Category.Find(id);
+            _connectedOfficeContext.Category.Remove(category);
 
             return _context.Category.Find(id);
         }
