@@ -72,7 +72,92 @@ there are some errors, but they are not as server and/or big like before.
 # Passwords
 for website login
 email = generalntjie@gmail.com
+
 password = Password@1
 
 
 # Reference List
+My reference list will be in the txt file below. If it doesnt want to open for some particular reason, then they will be at the bottom of the readme file.
+[referencelist.txt](https://github.com/00General00/CMPG-323-IOT-Device-Management/files/9671063/referencelist.txt)
+
+
+
+
+## SameReference List 
+
+https://www.youtube.com/watch?v=ZoSno6HcQHA
+
+
+https://stackoverflow.com/questions/47135262/addasync-vs-add-in-ef-core
+
+
+
+https://dotnet.microsoft.com/en-us/apps/aspnet/mvc
+
+
+https://www.youtube.com/watch?v=qJmEI2LtXIY     !!!!!!!!!!!!!!
+
+
+https://learn.microsoft.com/en-us/dotnet/csharp/misc/cs1106?f1url=%3FappId%3Droslyn%26k%3Dk(CS1106)
+
+
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
+
+
+System.AggregateException=
+https://stackoverflow.com/questions/63155869/system-aggregateexception-some-services-are-not-able-to-be-constructed-in-my
+
+
+https://msdn.microsoft.com/library/ff649690.aspx
+
+
+https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
+
+
+https://www.youtube.com/watch?v=MovvIW_thUs
+
+
+https://www.youtube.com/watch?v=-NCgRD9-C6
+
+
+https://stackoverflow.com/questions/70541644/error-while-injecting-dependency-in-asp-net-core
+
+https://www.youtube.com/watch?v=EjFE5d2lCV4
+
+https://www.c-sharpcorner.com/article/crud-operation-in-asp-net-mvc2/
+
+
+https://www.youtube.com/watch?v=xFeDCD4si3U
+
+
+https://www.youtube.com/watch?v=3pEax-5wXG8
+
+
+https://www.youtube.com/watch?v=d1cKitMBG_s
+
+
+https://www.youtube.com/watch?v=vN9NRqv7xmY
+
+
+https://learn.microsoft.com/en-us/answers/questions/788137/aspnet-core-api-error-multiple-constructors-accept.html
+
+
+https://mattmazzola.medium.com/asp-net-core-injecting-custom-data-classes-into-startup-classs-constructor-and-configure-method-7cc146f00afb
+
+https://www.youtube.com/watch?v=ru_pU3D4nac
+
+
+https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/windows-service?view=aspnetcore-6.0&tabs=visual-studio
+
+https://www.youtube.com/watch?v=KZxTOCuTuc0
+
+
+https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/examining-the-details-and-delete-methods
+
+https://www.youtube.com/watch?v=QjRLS_Mii9w
+
+
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0103?f1url=%3FappId%3Droslyn%26k%3Dk(CS0103)
+
+https://www.youtube.com/watch?v=8H4LXsRUcn0
+
