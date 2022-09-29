@@ -3,7 +3,7 @@
 # Project 3
 
 ## Introduction
-In project3 we are working with Implementations and patterns in ASP.NET.
+In project3 we are working with Standard and patterns in ASP.NET.
 We are given code and this code we needed to modify it and make the website run operators.
 
 
