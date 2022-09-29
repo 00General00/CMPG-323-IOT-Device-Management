@@ -1,30 +1,105 @@
 ﻿using DeviceManagement_WebApp.Data;
 using DeviceManagement_WebApp.Models;
-using DeviceManagement_WebApp.Repository;
+using Microsoft.AspNetCore.Identity.UI.V3.Pages.Internal.Account;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
-//using System.Web.Services.Discription;
+using System.Threading.Tasks;
 
 namespace DeviceManagement_WebApp.Repository
 {
-    public class DeviceRepository : GenericRepository<Device>,IDeviceRepository
+    public class DeviceRepository : GenericRepository<Device>, IDeviceRepository
     {
-
-        private readonly IDeviceRepository _repository;
-        public DeviceRepository(ConnectedOfficeContext _connectedOfficeContext) : base(_connectedOfficeContext)
+        public DeviceRepository(ConnectedOfficeContext context) : base(context)
         {
 
         }
+        // the methods below is the implementation of what they should do to get data from the database
 
-        public Device GetMostRecentService()
+
+        public void AddDevice(Device device)
+        {
+            _context.Device.Add(device);
+        }
+
+        public Device DeleteDevice(int id)
+        {
+            return _context.Device.Find(id); ;
+        }
+
+        public Device GetDeviceById(Guid? deviceId)
+        {
+            return _context.Device.Find(deviceId);
+        }
+
+        public Device GetMostRecentDevices()
         {
             return _context.Device.OrderByDescending(Device => Device.DateCreated).FirstOrDefault();
         }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
+        }
+
+        public void UpdateDevice(Device device)
+        {
+            _context.Entry(device).State = EntityState.Modified;
+        }
+
+        void IDeviceRepository.DeleteDevice(int id)
+        {
+            _context.Device.Find(id);
+            _context.Remove(id);
+
+        }
+
+        /**
+    public bool DeleteDevice(int id)
+    {
+       bool result = false;
+       var dev = _context.Device.Find(id);
+       _context.Device.Remove(dev);
+       _context.SaveChanges();
+
+       result = true;
+
+       return result;
+
+
     }
 
-}
+    public bool SaveDevice(Device device)
+    {
+       bool outcome = false;
+       try
+       {
+           _context.Device.Add(device);
+           _context.SaveChanges();
+           outcome = true;
+       }
+       catch {
+       }
    
 
 
+       return outcome;
+    }
 
 
+
+    public bool UpdateDevice(Device device)
+    {
+       bool outcome = false;
+       _context.Device.Update(device);
+       _context.SaveChanges();
+       outcome = true;
+
+
+       return outcome;
+    }**/
+    }
+
+
+}
