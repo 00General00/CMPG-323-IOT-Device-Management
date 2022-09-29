@@ -63,3 +63,12 @@ one can edited, view and delete a certain record.
 
 then when done, they can simply logout.
 
+
+# Disclaimer and Problems
+The reason for change in the project commit, is that i had to restart serveral times. I was getting a lot of erros. From Services. From program.cs and from my injections that i had inserted. so i had constatly restarted. and the repo, i committed thus far (6:29 am 09/29/2022) is the best thus far.
+there are some errors, but they are not as server and/or big like before.
+
+
+
+
+# Reference
