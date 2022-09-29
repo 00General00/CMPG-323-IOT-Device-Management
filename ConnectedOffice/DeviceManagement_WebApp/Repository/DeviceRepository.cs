@@ -15,7 +15,6 @@ namespace DeviceManagement_WebApp.Repository
         {
 
         }
-        // the methods below is the implementation of what they should do to get data from the database
 
 
         public void AddDevice(Device device)
