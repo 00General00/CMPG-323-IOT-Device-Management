@@ -62,3 +62,4 @@ the eye icon
 one can edited, view and delete a certain record.
 
 then when done, they can simply logout.
+
