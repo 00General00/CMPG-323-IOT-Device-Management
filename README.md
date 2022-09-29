@@ -1,13 +1,13 @@
 # CMPG-323-IOT-Device-Management
 
-#Project 3
+# Project 3
 
-##Introduction
+## Introduction
 In project3 we are working with Implementations and patterns in ASP.NET.
 We are given code and this code we needed to modify it and make the website run operators.
 
 
-#User Manual And Guid
+# User Manual And Guid
 
 When the user first run website. The first thing that they will see is the user interface.
 As seen in the picture below.
@@ -32,24 +32,24 @@ As the user enters their info. There are certain error handlers that appear in c
 ![Screenshot (24)](https://user-images.githubusercontent.com/73006104/192936932-a397a8bd-35c2-4c0f-91c3-212a8795a19d.png)
 ![Screenshot (25)](https://user-images.githubusercontent.com/73006104/192936942-d4668c52-5d1f-44e4-af93-3ae2c27c3cbd.png)
 
-####After Registering
+#### After Registering
 They are then sent to the next page, where they are already logged in.
 The user then has more options to click to.
 and each option has their own info.
 but similar operations
 ![Screenshot (26)](https://user-images.githubusercontent.com/73006104/192937134-9cafb56b-8881-4958-b5e5-c9db89e8b70d.png)
 
-####the Zones option
+#### the Zones option
 ![Screenshot (27)](https://user-images.githubusercontent.com/73006104/192937175-e5fb567d-077b-45fe-86c8-5c6a16504b9b.png)
 
-####the Categoiries option
+#### the Categoiries option
 ![Screenshot (28)](https://user-images.githubusercontent.com/73006104/192937201-5831cfad-77bc-41df-a7b3-330da3b16fb3.png)
 
-####the device option
+#### the device option
 
 ![Screenshot (30)](https://user-images.githubusercontent.com/73006104/192937258-1e5cba99-0c8a-47f3-828c-4bc30ef00a1f.png)
 
-####explation of the three pages
+#### explation of the three pages
 Each have data that is taken from the database and each of them have three icons on their records.
 the pen icon is used for editing and the eye icon is used to view, then the dustbin is used to delete.
 the pen icon
