@@ -78,12 +78,17 @@ password = Password@1
 
 # Reference List
 My reference list will be in the txt file below. If it doesnt want to open for some particular reason, then they will be at the bottom of the readme file.
-[referencelist.txt](https://github.com/00General00/CMPG-323-IOT-Device-Management/files/9671063/referencelist.txt)
+
+[referencelist.txt](https://github.com/00General00/CMPG-323-IOT-Device-Management/files/9671115/referencelist.txt)
+
 
 
 
 
 ## SameReference List 
+
+https://github.com/JacquiM/CMPG-323-IOT-Device-Management
+
 
 https://www.youtube.com/watch?v=ZoSno6HcQHA
 
@@ -160,4 +165,5 @@ https://www.youtube.com/watch?v=QjRLS_Mii9w
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0103?f1url=%3FappId%3Droslyn%26k%3Dk(CS0103)
 
 https://www.youtube.com/watch?v=8H4LXsRUcn0
+
 
