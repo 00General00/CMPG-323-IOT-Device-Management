@@ -11,143 +11,98 @@ using DeviceManagement_WebApp.Repository;
 
 namespace DeviceManagement_WebApp.Controllers
 {
-
     public class ZonesController : Controller
-
     {
-        private readonly IZoneRepository _zoneRepository;
-
-        public ZonesController(IZoneRepository zoneRepository)
+        private readonly IZonesRepository _zoneRepository;
+        public ZonesController(IZonesRepository zoneRepository)
         {
             _zoneRepository = zoneRepository;
         }
-
-
-        /*
-        // GET: Zones
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Zone.ToListAsync());
-        }
-
-        // GET: Zones/Details/5
-        public async Task<IActionResult> Details(Guid? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var zone = await _context.Zone
-                .FirstOrDefaultAsync(m => m.ZoneId == id);
-            if (zone == null)
-            {
-                return NotFound();
-            }
-
-            return View(zone);
-        }
-
-        // GET: Zones/Create
+        // GET: Zone
         public IActionResult Create()
         {
-            return View();
+            return View(new Zone());
         }
-
-        // POST: Zones/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ZoneId,ZoneName,ZoneDescription,DateCreated")] Zone zone)
-        {
-            zone.ZoneId = Guid.NewGuid();
-            _context.Add(zone);
-            await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+        public ActionResult Create(Zone zone)
+        {
+            _zoneRepository.AddZone(zone);
+            _zoneRepository.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+
+        public ActionResult Update(Guid id)
+        {
+            return View(_zoneRepository.GetZoneById(id));
+        }
+        [HttpPost]
+       
+
+        public ActionResult Update(Zone zone)
+        {
+            _zoneRepository.UpdateZone(zone);
+            _zoneRepository.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        //deletes a record 
+
+        public ActionResult Delete(int id)
+        {
+            _zoneRepository.DeleteZone(id);
+            _zoneRepository.SaveChanges();
+            return RedirectToAction("Index");
         }
 
+        // GET: Zones 
+        public async Task<IActionResult> Index()
+        {
+            var zone = _zoneRepository.GetAll();
+            return View(zone);
+        }
+
+        //GET: Zones/Details/5
+        public async Task<IActionResult> Details(Guid id)
+        {
+            Zone zone = _zoneRepository.GetZoneById(id);
+            return View(zone);
+        }
         // GET: Zones/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
+        public ActionResult Edit(Guid id)
         {
+            Zone zone = _zoneRepository.GetZoneById(id);
             if (id == null)
-            {
                 return NotFound();
-            }
-
-            var zone = await _context.Zone.FindAsync(id);
-            if (zone == null)
-            {
-                return NotFound();
-            }
             return View(zone);
+
         }
 
-        // POST: Zones/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("ZoneId,ZoneName,ZoneDescription,DateCreated")] Zone zone)
+        public ActionResult Edit(Zone zone)
         {
-            if (id != zone.ZoneId)
-            {
-                return NotFound();
-            }
+            var zonesRepository = _zoneRepository;
+            _zoneRepository.UpdateZone(zone);
+            _zoneRepository.SaveChanges();
 
-            try
-            {
-                _context.Update(zone);
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ZoneExists(zone.ZoneId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
             return RedirectToAction(nameof(Index));
 
+
         }
 
-        // GET: Zones/Delete/5
-        public async Task<IActionResult> Delete(Guid? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var zone = await _context.Zone
-                .FirstOrDefaultAsync(m => m.ZoneId == id);
-            if (zone == null)
-            {
-                return NotFound();
-            }
-
-            return View(zone);
-        }
-
-        // POST: Zones/Delete/5
+        // POST: Zone/Delete/1
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        public IActionResult DeleteConfirmed(Guid id)
         {
-            var zone = await _context.Zone.FindAsync(id);
-            _context.Zone.Remove(zone);
-            await _context.SaveChangesAsync();
+            var zone = _zoneRepository.GetZoneById(id);
+            _zoneRepository.Remove(zone);
+            _zoneRepository.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ZoneExists(Guid id)
-        {
-            return _context.Zone.Any(e => e.ZoneId == id);
-        }*/
+
     }
 }
