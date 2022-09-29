@@ -2,28 +2,22 @@
 using System.Linq.Expressions;
 using System;
 using DeviceManagement_WebApp.Models;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Threading.Tasks;
 
 namespace DeviceManagement_WebApp.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
+        //these are the methods defined to access data from the database 
         T GetById(int id);
-        void Remove(T Category);
-        void Add(T Category);
-
         IEnumerable<T> GetAll();
-
-        //existing
-      //  Category Update(Category category);
-
-        void AddRange(IEnumerable<T> entities);
-        
-        void RemoveRange(IEnumerable<T> entities);
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
+        void Add(T entity);
+        void AddRange(IEnumerable<T> entities);
+        void Remove(T entity);
+        void RemoveRange(IEnumerable<T> entities);
+
     }
-    /*
-    public interface IGenericRepository : IGenericRepository<Service>
-    {
-        Service GetMostRecentService();
-    }*/
+
 }
